@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>My Info</title>
+
+</head>
+<body>
+<nav class="navbar sticky-top navbar-light bg-light">
+  <div class="navbar-top">
+      <h1>Details of Individuals</h1>
+  </div>
+</nav>
+
+
+<!--<div class="slider">-->
+<!--        <div class="row">-->
+<!--        <div class="col-md-3">-->
+<!--            <a href="slide1.html">Slide1</a>-->
+<!--        </div>-->
+<!--        <div class="col-md-3">-->
+<!--            <a href="slide2.html">Slide2</a>-->
+<!--        </div>-->
+<!--        <div class="col-md-3">-->
+<!--            <a href="slide3.html">Slide3</a>-->
+<!--        </div>-->
+<!--        <div class="col-md-3">-->
+<!--            <a href="slide4.html">Slide4</a>-->
+<!--        </div>-->
+<!--        </div>-->
+<table>
+    <thead>
+    <tr>
+      <th>SN</th>
+      <th scope="col">name</th>
+      <th scope="col">address</th>
+      <th scope="col">salary</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for data in teacher_info %}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td>{{data.name}}</td>
+        <td>{{data.address}}</td>
+        <td>{{data.salary}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% block content %}
+{% include 'slider.html' %}
+{% endblock %}
+
+
+</body>
+</html>

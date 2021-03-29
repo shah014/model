@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<table>
+    <thead>
+    <tr>
+      <th>SN</th>
+      <th scope="col">sub_code</th>
+      <th scope="col">sub_name</th>
+      <th scope="col">sub_writer</th>
+      <th scope="col">sub_price</th>>
+    </tr>
+    </thead>
+    <tbody>
+    {% for data in sub_info %}
+    <tr>
+        <td>{{forloop.counter}}</td>
+        <td>{{data.sub_code}}</td>
+        <td>{{data.sub_name}}</td>
+        <td>{{data.sub_writer}}</td>
+        <td>{{data.sub_price}}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
